@@ -25,7 +25,7 @@ function showOder(arr) {
                 <td>${item.name}</td>
                 <td>${item.code}</td>
                 <td>${item.supplier}</td>
-                <td>${item.status}</td>
+                <td>${item.status == 0 ? "Hết hàng" : "Còn hàng"}</td>
             </tr>
         `
     }).join("")
