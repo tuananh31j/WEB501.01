@@ -19,5 +19,5 @@ import getInfo from "./demo2";
 // const show = () => "Ham show san pham";
 // console.log(show());
 
-console.log(user);
-getInfo();
+// console.log(user);
+// getInfo();
