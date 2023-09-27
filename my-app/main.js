@@ -1,22 +1,20 @@
 import Navigo from "navigo"
-import Homepage from "./src/pages/Homepage"
-import ProductPage from "./src/pages/Product"
+// import Homepage from "./src/pages/Homepage"
+// import ProductPage from "./src/pages/Product"
+// import AboutPage from "./src/pages/About"
+
+import { Homepage, ProductPage, AboutPage } from "./src/pages"
 
 const router = new Navigo("/")
 
-router.on("/", () => {
-  document.querySelector('#app').innerHTML = Homepage()
-})
+const render = (component, container) => {
+  container.innerHTML = component()
+}
 
-router.on("/product", () => {
-  document.querySelector('#app').innerHTML = ProductPage()
-})
+const app = document.querySelector('#app')
+
+router.on("/", () => render(Homepage, app))
+router.on("/product", () => render(ProductPage, app))
 
 router.resolve();
-
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     Hello
-//   </div>
-// `
 
