@@ -16,5 +16,9 @@ const app = document.querySelector('#app')
 router.on("/", () => render(Homepage, app))
 router.on("/product", () => render(ProductPage, app))
 
+router.notFound(() => {
+  app.innerHTML = "<h1>Page Not Found</h1>"
+})
+
 router.resolve();
 

@@ -1,11 +1,8 @@
+import Header from "../components/Header"
+
 const Homepage = () => {
     return `
-        <header>
-        <ul>
-            <li><a href="/">Homepage</li>
-            <li><a href="/product">Product</li>
-        </ul>
-        </header>
+        ${Header()}
         <div>
             Home Page
         </div>
