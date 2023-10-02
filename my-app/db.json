@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "json-server update",
+      "author": "typicode update",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "demo",
+      "author": "sontv"
+    },
+    {
+      "id": 3,
+      "title": "linh tinh",
+      "author": "hoangnm"
+    },
+    {
+      "title": "bai viet moi",
+      "author": "noname",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
