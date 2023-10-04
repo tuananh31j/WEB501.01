@@ -9,11 +9,6 @@
       "id": 2,
       "name": "Product 2",
       "image": "https://picsum.photos/100/125"
-    },
-    {
-      "id": 3,
-      "name": "Product 3",
-      "image": "https://picsum.photos/100/125"
     }
   ]
 }

@@ -7,13 +7,24 @@ const AdminProductPage = () => {
         useEffect(callback, deps)
 
     */
-    const [data, setData] = useState([])
+    const [products, setProduct] = useState([])
     useEffect(() => {
         fetch("http://localhost:3000/products")
             .then((response) => response.json())
-            .then((data) => setData(data))
-    }, [])
-    console.log(data);
+            .then((data) => setProduct(data))
+    }, [products])
+
+    useEffect(() => {
+        const btnDeletes = document.querySelectorAll(".btn-delete")
+        for (let btn of btnDeletes) {
+            btn.addEventListener("click", () => {
+                let id = btn.dataset.id
+                fetch(`http://localhost:3000/products/${id}`, {
+                    method: "DELETE"
+                })
+            })
+        }
+    })
     return /*html*/`
         <div>
             <table>
@@ -26,7 +37,20 @@ const AdminProductPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    ${products.map((product, index) => {
+        return /*html*/`
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${product.name}</td>
+                                <td>
+                                    <img src="${product.image}" alt="" />
+                                </td>
+                                <td>
+                                    <button data-id="${product.id}" class="btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                        `
+    }).join("")}
                 </tbody>
             </table>
         </div>
