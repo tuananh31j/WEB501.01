@@ -1,34 +1,19 @@
 {
-  "posts": [
+  "products": [
     {
-      "title": "json-server update",
-      "author": "typicode update",
-      "id": 1
+      "id": 1,
+      "name": "Product 1",
+      "image": "https://picsum.photos/100/125"
     },
     {
       "id": 2,
-      "title": "demo",
-      "author": "sontv"
+      "name": "Product 2",
+      "image": "https://picsum.photos/100/125"
     },
     {
       "id": 3,
-      "title": "linh tinh",
-      "author": "hoangnm"
-    },
-    {
-      "title": "bai viet moi",
-      "author": "noname",
-      "id": 4
+      "name": "Product 3",
+      "image": "https://picsum.photos/100/125"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
