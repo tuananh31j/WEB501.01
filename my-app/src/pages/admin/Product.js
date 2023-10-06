@@ -1,4 +1,4 @@
-import { useEffect, useState } from "../../libs"
+import { router, useEffect, useState } from "../../libs"
 const AdminProductPage = () => {
     /*
         useState
@@ -12,7 +12,7 @@ const AdminProductPage = () => {
         fetch("http://localhost:3000/products")
             .then((response) => response.json())
             .then((data) => setProduct(data))
-    }, [products])
+    }, [])
 
     useEffect(() => {
         const btnDeletes = document.querySelectorAll(".btn-delete")
@@ -21,12 +21,13 @@ const AdminProductPage = () => {
                 let id = btn.dataset.id
                 fetch(`http://localhost:3000/products/${id}`, {
                     method: "DELETE"
-                })
+                }).then(() => router.navigate("/admin/product"))
             })
         }
     })
     return /*html*/`
         <div>
+            <a href="/admin/product/add"><button>Add New Product</button></a>
             <table>
                 <thead>
                     <tr>
