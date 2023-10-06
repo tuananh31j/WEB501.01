@@ -47,6 +47,7 @@ const AdminProductPage = () => {
                                     <img src="${product.image}" alt="" />
                                 </td>
                                 <td>
+                                    <a href="/admin/product/update/${product.id}"><button>Update</button></a>
                                     <button data-id="${product.id}" class="btn-delete">Delete</button>
                                 </td>
                             </tr>
